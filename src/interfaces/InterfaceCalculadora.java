@@ -1,5 +1,7 @@
 package interfaces;
 
+import miniprogramas.excepcoes.OperacaoInvalidaException;
+
 public interface InterfaceCalculadora {
 	//Operacoes de soma
 	public <E extends Number> E somar(E a, E b);
@@ -20,9 +22,9 @@ public interface InterfaceCalculadora {
 	public <E extends Number>  E multiplicacao(E arr[]);
 	
 	//Operacoes de divisao
-	public <E extends Number> E divisao(E a, E b);
-	public double divisao(double a, double b);
-	public double divisao(double arr[]);
-	public <E extends Number> E divisao(E arr[]);
+	public <E extends Number> E divisao(E a, E b)throws OperacaoInvalidaException;
+	public double divisao(double a, double b)throws OperacaoInvalidaException;
+	public double divisao(double arr[])throws OperacaoInvalidaException;
+	public <E extends Number> E divisao(E arr[])throws OperacaoInvalidaException;
 	
 }
